@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 工具库 | Rui Zhang</title>
+  <meta name="description" content="AI 在科研、学习、动画 / 视频制作中的实用链接合集。">
+  <meta name="theme-color" content="#0b1f2a">
+  <link rel="canonical" href="https://raysekiro.github.io/ai-tools/">
+  <style>
+    :root {
+      --ink: #15333a; --muted: #587077; --paper: #f5faf8; --white: #ffffff;
+      --navy: #103b46; --aqua: #67d5c8; --aqua-dark: #13877e; --line: rgba(19, 35, 42, .16);
+      --card: #ffffff; --max: 1100px;
+      --sans: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root { --ink: #e3eeec; --muted: #9db3b5; --paper: #0d1d22; --card: #13292f; --line: rgba(220, 240, 238, .14); }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); line-height: 1.6; }
+    a { color: inherit; }
+    .shell { width: min(calc(100% - 32px), var(--max)); margin-inline: auto; }
+    header { padding: 56px 0 40px; color: var(--white); background: radial-gradient(circle at 82% 16%, rgba(103,213,200,.28), transparent 30%), linear-gradient(135deg, #123a46 0%, #145462 58%, #103943 100%); }
+    .back { color: var(--aqua); font-size: 14px; font-weight: 600; text-decoration: none; }
+    h1 { margin: 18px 0 8px; font-size: clamp(32px, 6vw, 52px); line-height: 1.1; }
+    header p { margin: 0; color: #cfdbdc; }
+    .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+    .filters button { padding: 6px 14px; color: var(--white); background: transparent; border: 1px solid rgba(255,255,255,.4); border-radius: 999px; font: inherit; font-size: 14px; cursor: pointer; }
+    .filters button[aria-pressed="true"] { color: var(--navy); background: var(--aqua); border-color: var(--aqua); }
+    main { padding: 32px 0 64px; }
+    section { margin-bottom: 40px; }
+    h2 { margin: 0 0 16px; font-size: 22px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+    .card { display: flex; flex-direction: column; gap: 6px; padding: 18px; background: var(--card); border: 1px solid var(--line); border-radius: 14px; text-decoration: none; transition: border-color .15s ease, transform .15s ease; }
+    .card:hover, .card:focus-visible { border-color: var(--aqua-dark); transform: translateY(-2px); }
+    .card strong { font-size: 16px; }
+    .card span { color: var(--muted); font-size: 14px; }
+    .card small { margin-top: auto; padding-top: 6px; color: var(--aqua-dark); font-size: 12px; overflow-wrap: anywhere; }
+    footer { padding: 24px 0 40px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell">
+      <a class="back" href="../">← Rui Zhang</a>
+      <h1>AI 工具库</h1>
+      <p>AI 在科研、学习、动画 / 视频制作中的实用链接。</p>
+      <div class="filters" role="group" aria-label="按分类筛选">
+        <button type="button" data-filter="all" aria-pressed="true">全部</button>
+        <button type="button" data-filter="research" aria-pressed="false">🔬 科研</button>
+        <button type="button" data-filter="learning" aria-pressed="false">📚 学习</button>
+        <button type="button" data-filter="animation" aria-pressed="false">🎬 动画 / 视频</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section data-category="research">
+      <h2>🔬 科研</h2>
+      <div class="grid">
+        <a class="card" href="https://research.google/blog/analyzing-technical-documents-with-deep-review/" target="_blank" rel="noopener"><strong>Google Research · Deep Review</strong><span>用 AI 分析、审阅技术文档 / 论文</span><small>research.google ↗</small></a>
+        <a class="card" href="https://x.com/anthropicai/status/2105733864152858919" target="_blank" rel="noopener"><strong>Claude for Science</strong><span>Anthropic 关于 Claude 在科学研究中应用的发布</span><small>x.com/AnthropicAI ↗</small></a>
+        <a class="card" href="https://x.com/claudeai/status/2111177834127601902" target="_blank" rel="noopener"><strong>Claude 可视化分析</strong><span>Claude 做数据可视化与分析</span><small>x.com/claudeai ↗</small></a>
+      </div>
+    </section>
+
+    <section data-category="learning">
+      <h2>📚 学习</h2>
+      <div class="grid">
+        <a class="card" href="https://x.com/mihail_eric/status/2095166860740174273" target="_blank" rel="noopener"><strong>Stanford AI 课程</strong><span>Mihail Eric 分享的 Stanford 课程</span><small>x.com/mihail_eric ↗</small></a>
+        <a class="card" href="https://x.com/xmglab/status/2090749769190957219" target="_blank" rel="noopener"><strong>Google AI 学生优惠</strong><span>领取 Google AI 学生优惠的方法</span><small>x.com/xmglab ↗</small></a>
+        <a class="card" href="https://x.com/uudonx/status/2105832589496111281" target="_blank" rel="noopener"><strong>Claude 回复优化</strong><span>让 Claude 回答更好的技巧</span><small>x.com/uudonx ↗</small></a>
+      </div>
+    </section>
+
+    <section data-category="animation">
+      <h2>🎬 动画 / 视频制作</h2>
+      <div class="grid">
+        <a class="card" href="https://github.com/ManimCommunity/manim" target="_blank" rel="noopener"><strong>Manim</strong><span>用 Python 代码制作数学 / 科研动画（3Blue1Brown 同款）</span><small>github.com/ManimCommunity ↗</small></a>
+        <a class="card" href="https://www.remotion.dev/" target="_blank" rel="noopener"><strong>Remotion</strong><span>用 React 代码生成视频，适合让 AI 写代码出片</span><small>remotion.dev ↗</small></a>
+        <a class="card" href="https://runwayml.com/" target="_blank" rel="noopener"><strong>Runway</strong><span>AI 视频生成与编辑</span><small>runwayml.com ↗</small></a>
+        <a class="card" href="https://klingai.com/" target="_blank" rel="noopener"><strong>可灵 Kling</strong><span>快手 AI 视频生成</span><small>klingai.com ↗</small></a>
+        <a class="card" href="https://labs.google/flow/about" target="_blank" rel="noopener"><strong>Google Flow (Veo)</strong><span>Google 的 AI 电影 / 视频制作工具</span><small>labs.google/flow ↗</small></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell">持续更新中 · 源文件见 <a href="https://github.com/Raysekiro/Raysekiro.github.io/tree/main/ai-tools" target="_blank" rel="noopener">GitHub</a></footer>
+
+  <script>
+    const buttons = document.querySelectorAll('[data-filter]');
+    buttons.forEach((button) => button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      buttons.forEach((b) => b.setAttribute('aria-pressed', String(b === button)));
+      document.querySelectorAll('[data-category]').forEach((section) => {
+        section.hidden = filter !== 'all' && section.dataset.category !== filter;
+      });
+    }));
+  </script>
+</body>
+</html>
